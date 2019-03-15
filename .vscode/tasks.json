@@ -1,0 +1,43 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build AssignmentTesting.exe",
+            "type": "shell",
+            "command": "clang",
+            "args": [
+                 "-Wall", "-I", "-g", "-pedantic", "-std=c99", "E26/26.c", "-o", "26.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+
+
+
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${Workspace}/AssignmentTesting.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${Workspace}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/MinGW/bin/gcc.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": false
+                }
+            ],
+            "preLaunchTask": "build AssignmentTesting"
+        }
+    ]
+}
