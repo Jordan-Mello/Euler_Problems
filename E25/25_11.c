@@ -25,7 +25,7 @@ int main(void)
     if(in[0] == 's')
     {
         printf("Please enter the desired Fibonacci number: ");
-        scanf("%d", &DIGITS);
+        scanf("%d", &DIGITS); //stores uInput in global variable (default is 75k)
         printf("\nNow calculating Fibonacci number %d", DIGITS);
     }
     else if (in[0] == 'd')
